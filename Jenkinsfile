@@ -1,11 +1,6 @@
 pipeline {
-  agent {
-    docker {
-      image 'mcr.microsoft.com/playwright:v1.48.2-jammy'
-      args '--ipc=host'
-    }
-  }
-
+  agent any
+  
   options {
     timestamps()
     timeout(time: 30, unit: 'MINUTES')
